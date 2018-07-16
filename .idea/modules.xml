@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dk-foundation-gateway.iml" filepath="$PROJECT_DIR$/dk-foundation-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dk-foundation-gateway-scg/dk-foundation-gateway-scg.iml" filepath="$PROJECT_DIR$/dk-foundation-gateway-scg/dk-foundation-gateway-scg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dk-foundation-gateway-zuul/dk-foundation-gateway-zuul.iml" filepath="$PROJECT_DIR$/dk-foundation-gateway-zuul/dk-foundation-gateway-zuul.iml" />
+    </modules>
+  </component>
+</project>

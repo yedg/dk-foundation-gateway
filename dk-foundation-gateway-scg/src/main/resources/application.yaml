@@ -1,0 +1,45 @@
+server:
+  port: 3002
+
+spring:
+  application:
+    name: dk-gateway-server
+  cloud:
+#    consul:
+#      host: localhost
+#      port: 8500
+#      discovery:
+#        healthCheckPath: /actuator/health
+#        healthCheckInterval: 15s
+#        instance-id: dk-gateway-server
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+#      - id: dk-test
+#        uri: http://localhost:8020/
+#        predicates:
+#        - Path=/test/**
+#        - Header=X-Gray, true
+#        filters:
+#        - RewritePath=/test/(?<segment>.*), /$\{segment}
+      - id: dk-test
+        uri: http://localhost:8021/
+        predicates:
+        - Path=/test/**
+        filters:
+        - RewritePath=/test/(?<segment>.*), /$\{segment}
+#      - id: dk-test
+#        uri: lb://dk-test
+#        predicates:
+#        - Path=/test/**
+#        filters:
+#        - RewritePath=/test/(?<segment>.*), /$\{segment}
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
